@@ -71,13 +71,13 @@ DECLARE_ASN1_ITEM(DHparams)
 /* #define DH_GENERATOR_3       3 */
 # define DH_GENERATOR_5          5
 
-/* DH_check error codes */
+/* DH_check error codes, some of them shared with DH_check_pub_key */
 # define DH_CHECK_P_NOT_PRIME            0x01
 # define DH_CHECK_P_NOT_SAFE_PRIME       0x02
 # define DH_UNABLE_TO_CHECK_GENERATOR    0x04
 # define DH_NOT_SUITABLE_GENERATOR       0x08
 # define DH_CHECK_Q_NOT_PRIME            0x10
-# define DH_CHECK_INVALID_Q_VALUE        0x20
+# define DH_CHECK_INVALID_Q_VALUE        0x20 /* +DH_check_pub_key */
 # define DH_CHECK_INVALID_J_VALUE        0x40
 
 /* DH_check_pub_key error codes */
